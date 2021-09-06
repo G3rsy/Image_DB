@@ -1,0 +1,13 @@
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\bin\Debug\netcoreapp3.1\Service_DB.exe
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\bin\Debug\netcoreapp3.1\Service_DB.deps.json
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\bin\Debug\netcoreapp3.1\Service_DB.runtimeconfig.json
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\bin\Debug\netcoreapp3.1\Service_DB.runtimeconfig.dev.json
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\bin\Debug\netcoreapp3.1\Service_DB.dll
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\bin\Debug\netcoreapp3.1\Service_DB.pdb
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.csprojAssemblyReference.cache
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.AssemblyInfoInputs.cache
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.AssemblyInfo.cs
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.csproj.CoreCompileInputs.cache
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.dll
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.pdb
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_DB\obj\Debug\netcoreapp3.1\Service_DB.genruntimeconfig.cache

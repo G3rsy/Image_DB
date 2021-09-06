@@ -1,0 +1,13 @@
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\bin\Debug\netcoreapp3.1\Service_Resizer.exe
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\bin\Debug\netcoreapp3.1\Service_Resizer.deps.json
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\bin\Debug\netcoreapp3.1\Service_Resizer.runtimeconfig.json
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\bin\Debug\netcoreapp3.1\Service_Resizer.runtimeconfig.dev.json
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\bin\Debug\netcoreapp3.1\Service_Resizer.dll
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\bin\Debug\netcoreapp3.1\Service_Resizer.pdb
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.csprojAssemblyReference.cache
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.AssemblyInfoInputs.cache
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.AssemblyInfo.cs
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.csproj.CoreCompileInputs.cache
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.dll
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.pdb
+C:\Users\Gabriele\Desktop\Image_Resizer\Service_Resizer\obj\Debug\netcoreapp3.1\Service_Resizer.genruntimeconfig.cache
