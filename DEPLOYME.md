@@ -15,4 +15,4 @@ Per il deploy di questi servizi e' necessario:
   ```
   Nel caso in cui la porta 8080 e 8081 non vadano bene e' necessario modificare il parametro -p x:8080, -p x:8081 sostituenso la x alla porta desiderata;
   
-  Ora i servizi sono raggiungibili all'indirizzo 'http://localhost://8080' e 'http://localhost://8081' relativamente per Service_DB e per Service_Resizer
+  Ora i servizi sono raggiungibili all'indirizzo 'http://localhost://8080' e 'http://localhost://8081' relativamente per Service_DB e per Service_Resizer.
