@@ -8,9 +8,9 @@ using System.Drawing;
 namespace Service_DB{
     class Program{
         public static HttpListener listener;
-        public static string url = "http://localhost:8080/";
+        public static string url = "http://*:8080/";
 
-        public static string path = ".\\Files\\";
+        public static string path = "Files/";
 
         public static string HTTPBodyRequestReader(HttpListenerRequest req){
             String contentType = req.ContentType;

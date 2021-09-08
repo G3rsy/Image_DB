@@ -72,7 +72,7 @@ namespace Service_DB
                 int width = Convert.ToInt32(strArr[1]);
                 int height = Convert.ToInt32(strArr[2]);
 
-                string path =".\\Files\\"+imageName;
+                string path ="Files/"+imageName;
 
                 // Use Threading to solve the resize requets
                 bool success = ResizeImage(path, width, height);
@@ -138,7 +138,7 @@ namespace Service_DB
     class Program
     {
         public static HttpListener listener;
-        public static string url = "http://localhost:8081/";
+        public static string url = "http://*:8081/";
 
         public static void Main(string[] args)
         {

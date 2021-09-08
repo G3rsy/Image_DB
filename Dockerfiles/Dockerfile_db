@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/dotnet/sdk:3.1
+
+USER root
+
+RUN apt-get update
+RUN apt-get install -y apt-utils
+RUN apt-get install -y libgdiplus
+RUN ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll
+
+#Creating the environment
+WORKDIR /App
+RUN mkdir Files
+COPY ../Service_DB/*.csproj .
+COPY ../Service_DB/*.cs .
+
+RUN ["dotnet", "restore"]
+CMD ["dotnet" ,"run"]
