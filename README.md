@@ -36,7 +36,7 @@ Ogni volta che arriva una nuova richiesta viene creato un nuovo Thread che si oc
 ### GET
   - Metodo: GET;
 
-## DELETE
+### DELETE
   - Metodo: DELETE;
   - ContentType: text/html;
   - body: "nomeImmagine.jpg";
