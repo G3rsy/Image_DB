@@ -67,6 +67,9 @@ namespace Service_DB
                 // Request has to be a String like
                 // IMAGE NAME, WIDTH, HEIGHT
                 string[] strArr = toParse.Split(' ');
+                
+                // Response settings
+                String response;
                 if(strArr.Length == 3)
                 {
                     string imageName= strArr[0];
@@ -77,10 +80,6 @@ namespace Service_DB
 
                     // Use Threading to solve the resize requets
                     bool success = ResizeImage(path, width, height);
-                
-
-                    // Response settings
-                    String response;
 
                     if(success)
                         response = "Successfully modified";
