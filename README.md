@@ -6,7 +6,7 @@ E' composto da due servizi:
 - Service_DB, permette di caricare, vedere ed eliminare le foto sul server;
 - Service_Resizer, permette di ridimesionare una foto preesistente sul server;
 
-Per la gestione delle richieste http ho utilizzato HttpListener su entrami i servizi.
+Per la gestione delle richieste HTTP ho utilizzato HttpListener su entrami i servizi.
 Per la gestione delle immagini ho utilizzato la libreria System.Drawing che implementa la classe Bitmap che e' stata utilizzata per manipolare le immagini.
 
 # Service_DB
@@ -58,3 +58,9 @@ Per effettuare la dockerizzazione ho creto un dockerfile per servizio che parten
 
 Nel DockerFile vengono installate anche alcune dipendenze che mancavano per la corretta esecuzione delle funzione nel namespace System.Drawing per la gestione delle immagini.
 
+# Considerazioni sui DB
+
+Personalmente in caso di storage sufficentemente grande, ritengo sia la soluzione migliore quella di utilizzare un volume tramite NFS in quanto la gestione delle immagini richiede una capacita' computazionale importante rispetto a quella che puo' essere la gestione di semplici file.
+Una soluzione di questo tipo permette di ottimizzare le prestazione del caricamento e dell'elaborazione delle foto, senza dover passare da un ulteriore programma che necessita di ulteriori risorse.
+
+Avendo un NFS dislocato, eventuali errori potrebbere essere dati solo dalla rete o eventualmente da un guasto hardware.
