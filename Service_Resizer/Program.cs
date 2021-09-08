@@ -67,24 +67,29 @@ namespace Service_DB
                 // Request has to be a String like
                 // IMAGE NAME, WIDTH, HEIGHT
                 string[] strArr = toParse.Split(' ');
+                if(strArr.Length == 3)
+                {
+                    string imageName= strArr[0];
+                    int width = Convert.ToInt32(strArr[1]);
+                    int height = Convert.ToInt32(strArr[2]);
 
-                string imageName= strArr[0];
-                int width = Convert.ToInt32(strArr[1]);
-                int height = Convert.ToInt32(strArr[2]);
+                    string path ="Files/"+imageName;
 
-                string path ="Files/"+imageName;
+                    // Use Threading to solve the resize requets
+                    bool success = ResizeImage(path, width, height);
+                
 
-                // Use Threading to solve the resize requets
-                bool success = ResizeImage(path, width, height);
-               
+                    // Response settings
+                    String response;
 
-                // Response settings
-                String response;
-
-                if(success)
-                    response = "Successfully modified";
-                else
-                    response = "Something went wrong";
+                    if(success)
+                        response = "Successfully modified";
+                    else
+                        response = "Something went wrong";
+                }else{
+                    response = "Wrong input format";
+                }
+                
 
                 // Write the response info
                 HTTPResponser(response, resp);
@@ -97,6 +102,10 @@ namespace Service_DB
         {
             Thread.Yield();
             bool result = false;
+
+            //If file exist create a copy of the image with the modified dimension
+            //Wrap the old image in the new bitmap
+            //override the old image with the new one
             if(File.Exists(path)){
                 Bitmap image = new Bitmap(path);
                 Bitmap destImage = new Bitmap(width, height);

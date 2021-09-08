@@ -61,13 +61,10 @@ namespace Service_DB{
                 listener.Start();
                 Console.WriteLine("Listening for connections on {0}", url);
 
-                //byte[] data = null;
                 String response = null;
 
-                // While a user hasn't visited the `shutdown` url, keep on handling requests
                 while (true)
                 {
-                    //data = null;
 
                     // Will wait here until we hear from a connection
                     HttpListenerContext ctx = listener.GetContext();
@@ -84,27 +81,38 @@ namespace Service_DB{
                     Console.WriteLine();
 
 
-
                     // Client send an image -- so that the program store the image and refresh list of images
                     if (req.HttpMethod == "POST")
                     {
                         Console.WriteLine("POST");
 
-                        Bitmap image = new Bitmap(req.InputStream);
-                        string name=(DateTime.Now.ToString("yyyyMMddHHmmssffff"))+".jpg";
+                        if(req.HasEntityBody && req.ContentType=="image/jpg")
+                        {
+                            Bitmap image = new Bitmap(req.InputStream);
 
-                        image.Save(path+name);
-                        image.Dispose();    
-                        //da creare un namegenerator
-                        response = "Posted image "+name;
+                            //Name generator that avoid conflicts
+                            string name=(DateTime.Now.ToString("yyyyMMddHHmmssffff"))+".jpg";
+
+                            image.Save(path+name);
+                            image.Dispose();    
+                            
+                            //Client will receive the new image name
+                            response = "Posted image "+name;
+                        }else{
+                            responde = "Wrong input format";
+                        }
                     }
-                    // Client will receive back the list of images in the storage
+                    //Client will receive the list of images in the server
                     else if (req.HttpMethod == "GET")
                     {
+                        Console.WriteLine("GET");
+                        //Construction of the string with the list of images
                         string[] constr = Directory.GetFiles(path);
                         string outStr = "";
+
+                        //Verify if some images are present in the server
                         if(constr.Length != 0){
-                            // Cleaning the output from the path string
+
                             for (int i=0; i<constr.Length; i++){
                                 string name;
                                 int widht;
@@ -122,13 +130,12 @@ namespace Service_DB{
                         }else{
                             outStr = "No Images found";
                         }
-                    
-                        Console.WriteLine(outStr);
                         response = outStr;
                     }
                     // Server will delete the image with the name in the path
                     else if (req.HttpMethod == "DELETE")
                     {
+                        Console.WriteLine("DELETE");
                         string imageName = "";
                         
 
