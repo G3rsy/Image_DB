@@ -6,11 +6,14 @@ E' composto da due servizi:
 - Service_DB, permette di caricare, vedere ed eliminare le foto sul server;
 - Service_Resizer, permette di ridimesionare una foto preesistente sul server;
 
+Per la gestione delle richieste http ho utilizzato HttpListener su entrami i servizi.
+Per la gestione delle immagini ho utilizzato la libreria System.Drawing che implementa la classe Bitmap che e' stata utilizzata per manipolare le immagine.
+
 # Service_DB
 Espone un Endpoint su http://localhost:8080 che si mette in attesa della connessione da parte di un client. Gestisce le richieste (POST, GET, DELETE) sequenzialmente.
 
 ## POST
-Se la richiesta ricevuta tramite HTTP e' di ti POST, viene letto il body della richiesta e salvato come immagine con nome 'dateTimestamp.jpg'.
+Se la richiesta ricevuta tramite HTTP e' di tipo POST, viene letto il body della richiesta e salvato come immagine con nome 'dateTimestamp.jpg'.
 
 Viene inviata come risposta, il nome dell'immagine creata sul server.
 
@@ -46,3 +49,12 @@ Ogni volta che arriva una nuova richiesta viene creato un nuovo Thread che si oc
   - Metodo: POST:
   - ContentType: text/html;
   - body: "nomeImmagine.jpg larghezza(int) altezza(int)"
+
+Come Risposte a queste richieste, vale per entrambe i servizi, vengono inviati dei messaggi di testo che cominicano la riuscita dell'operazione. Nel caso della GET, viene restituita un testo con nome, larghezza e altezza delle eventuali foto presenti.
+
+#Dockerizzazione
+
+Per effettuare la dockerizzazione ho creto un dockerfile per servizio che partendo dall'immagine asp.net di Microsft mi permettono di crere il giusto ambiente per rendere funzionante il server su container. Per la condivisione dei dati ho riservato un volume che viene assegnato ai container in fase di run, che permette di mantere le immagini memorizzate anche in caso di malfunzionamente da parte delle stesse. 
+
+Nel DockerFile vengono installate anche alcune dipendenze che mancavano per la corretta esecuzione delle funzione nel namespace System.Drawing per la gestione delle immagini.
+
