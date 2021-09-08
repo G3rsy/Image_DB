@@ -52,7 +52,7 @@ Ogni volta che arriva una nuova richiesta viene creato un nuovo Thread che si oc
 
 Come Risposte a queste richieste, vale per entrambe i servizi, vengono inviati dei messaggi di testo che cominicano la riuscita dell'operazione. Nel caso della GET, viene restituita un testo con nome, larghezza e altezza delle eventuali foto presenti.
 
-#Dockerizzazione
+# Dockerizzazione
 
 Per effettuare la dockerizzazione ho creto un dockerfile per servizio che partendo dall'immagine asp.net di Microsft mi permettono di crere il giusto ambiente per rendere funzionante il server su container. Per la condivisione dei dati ho riservato un volume che viene assegnato ai container in fase di run, che permette di mantere le immagini memorizzate anche in caso di malfunzionamente da parte delle stesse. 
 
