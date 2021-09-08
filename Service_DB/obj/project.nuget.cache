@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nwtHOY577X209Jod3/SiJkjhezCBCT4ku0iucsEilNR9YSXFx4KMEIxNIhMNyTSE9ypBaft+Y/bn8Bmn4H9Cog==",
+  "dgSpecHash": "byBM7f6mUY1pKpjIOEk/t58S1egjW/48mLsRgsj9DtI+8pC8nUJFlqzTRtoJyejSXbfCPlOXDzztcN9yqEuLdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriele\\Desktop\\Image_Resizer\\Service_DB\\Service_DB.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriele\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriele\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriele\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

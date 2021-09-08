@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z+a19EKvcrn5XX4bVVFwoJVm0XSM9Ddix3U4kiumEPUlW61X3CmCJRGjvsTSGo1ci0zn60LWKxuMw1vI/NQS6A==",
+  "dgSpecHash": "3vYN4ng0Hc/tvK0aZfbyfq0dRIIFtvFPTdjdAkRlnzEB/6Qw4+iRZnf+W39IlGqd3sSKLYXIm1rfp3fZu44b3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriele\\Desktop\\Image_Resizer\\Service_Resizer\\Service_Resizer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriele\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriele\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriele\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
