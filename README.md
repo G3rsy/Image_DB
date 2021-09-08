@@ -1,4 +1,4 @@
-# Image_Resizer
+# Image_DB
 Servizi che permettono di salvare e modificare file .jpg tramite http.
 
 E' composto da due servizi:
