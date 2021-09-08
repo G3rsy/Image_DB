@@ -99,7 +99,7 @@ namespace Service_DB{
                             //Client will receive the new image name
                             response = "Posted image "+name;
                         }else{
-                            responde = "Wrong input format";
+                            response = "Wrong input format";
                         }
                     }
                     //Client will receive the list of images in the server
