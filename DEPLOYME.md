@@ -3,12 +3,12 @@ Per il deploy di questi servizi e' necessario:
 
   - Scaricare il progetto il locale;
   - Assicurarsi che il docker deamon sia attivo;
-  - Eseguire la build dei due servizi con:
+  - Avviando la powershell dalla cartella del progetto, eseguire la build dei due servizi con:
   ```
   docker build -t db_service --file .\DockerFiles\Dockerfile_db .
   docker build -t resizer_service  --file .\DockerFiles\Dockerfile_Res .
   ```
-  - Eseguire il comando run per avviare i container:
+  - ed il comando run per avviare i container:
   ```
   docker run --mount type=bind,source="$(pwd)"\Files,target=/App/Files -p 8080:8080 db_service 
   docker run --mount type=bind,source="$(pwd)"\Files,target=/App/Files -p 8081:8081 resizer_service
