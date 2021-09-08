@@ -62,5 +62,3 @@ Nel DockerFile vengono installate anche alcune dipendenze che mancavano per la c
 
 Personalmente in caso di storage sufficentemente grande, ritengo sia la soluzione migliore quella di utilizzare un volume tramite NFS in quanto la gestione delle immagini richiede una capacita' computazionale importante rispetto a quella che puo' essere la gestione di semplici file.
 Una soluzione di questo tipo permette di ottimizzare le prestazione del caricamento e dell'elaborazione delle foto, senza dover passare da un ulteriore programma che necessita di ulteriori risorse.
-
-Avendo un NFS dislocato, eventuali errori potrebbere essere dati solo dalla rete o eventualmente da un guasto hardware.
